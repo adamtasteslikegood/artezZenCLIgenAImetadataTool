@@ -1,0 +1,18 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ImageMetadata",
+  "type": "object",
+  "properties": {
+    "title": { "type": "string", "description": "Short title for the image." },
+    "description": { "type": "string", "description": "Detailed description of the image." },
+    "caption": { "type": "string", "description": "Short display caption." },
+    "tags": {
+      "type": "array",
+      "items": { "type": "string" },
+      "minItems": 3,
+      "maxItems": 6,
+      "description": "3 to 6 relevant keywords."
+    }
+  },
+  "required": ["title", "description", "caption", "tags"]
+}

@@ -1,0 +1,51 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ImageGalleryAppSchema",
+  "type": "object",
+  "properties": {
+    "image": {
+      "type": "object",
+      "properties": {
+        "path": { "type": "string" },
+        "filename": { "type": "string" },
+        "extension": { "type": "string" },
+        "metadata": { "$ref": "#/definitions/Metadata" }
+      },
+      "required": ["path", "filename", "extension", "metadata"]
+    },
+    "output": {
+      "type": "object",
+      "properties": {
+        "embed": { "type": "boolean" },
+        "write_json": { "type": "boolean" },
+        "json_output_path": { "type": "string" }
+      },
+      "required": ["embed", "write_json"]
+    },
+    "user": {
+      "type": "object",
+      "properties": {
+        "mode": { "type": "string", "enum": ["cli", "interactive"] }
+      },
+      "required": ["mode"]
+    }
+  },
+  "required": ["image", "output", "user"],
+  "definitions": {
+    "Metadata": {
+      "type": "object",
+      "properties": {
+        "title": { "type": "string" },
+        "description": { "type": "string" },
+        "caption": { "type": "string" },
+        "tags": {
+          "type": "array",
+          "items": { "type": "string" },
+          "minItems": 3,
+          "maxItems": 6
+        }
+      },
+      "required": ["title", "description", "caption", "tags"]
+    }
+  }
+}
