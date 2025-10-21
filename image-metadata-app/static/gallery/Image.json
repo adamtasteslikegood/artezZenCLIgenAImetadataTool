@@ -1,0 +1,20 @@
+{
+    "title": "Galactic Poker Night",
+    "description": "In a vibrant interstellar setting, a diverse group of extraterrestrial beings gather around a green felt poker table, engaged in a high-stakes game. The scene captures a unique blend of characters, from a dragon-like alien smoking a pipe to a cheerful green frog in a top hat. The backdrop features a swirling galaxy visible through a large window, enhancing the cosmic atmosphere. Each character displays distinct expressions, adding to the playful tension of the game, while bottles and chips scattered across the table hint at the stakes involved. This artwork invites viewers to imagine the stories and friendships that unfold in the depths of space.",
+    "ai_generated": true,
+    "ai_details": {
+        "provider": "openai",
+        "model": "gpt-4o-mini",
+        "prompt": "Analyze this image and produce STRICT JSON matching the schema. Focus on high-quality `title` and `description` suitable for a gallery item.",
+        "response_id": "resp_03ddd5e73549c6690068f7fc398dac819481a357928ca4f493",
+        "finish_reason": "",
+        "created": 0,
+        "attempted_at": 1761082431,
+        "status": "ok",
+        "error": "",
+        "error_body": "",
+        "raw_response": {}
+    },
+    "reviewed": false,
+    "detected_at": 1761082431
+}

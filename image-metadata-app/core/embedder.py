@@ -25,10 +25,12 @@ def embed_metadata(image_path: str, metadata: dict):
         print(f"[!] Failed to embed metadata: {e}")
 
 def create_json_sidecar(image_path: str, metadata: dict):
+    """Write a JSON sidecar next to the image.
+
+    Expects `metadata` to already conform to the ImageSidecarCopy schema.
+    """
     p = Path(image_path)
     json_path = p.with_suffix(".json")
-    payload = dict(metadata)
-    payload["filename"] = p.name
     with open(json_path, "w", encoding="utf-8") as f:
-        json.dump(payload, f, indent=4, ensure_ascii=False)
+        json.dump(metadata, f, indent=4, ensure_ascii=False)
     print(f"[✓] JSON sidecar saved as: {json_path.name}")
